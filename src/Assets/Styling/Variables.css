@@ -1,0 +1,13 @@
+/* VARIABLES */
+
+:root {
+	--primary-red: #ff1e00;
+	--primary-orange: #ffa500;
+}
+
+/* FONTS */
+@font-face {
+	font-family: "Nunito";
+	src: local("Nunito-Regular"),
+		url(../Fonts/Nunito/Nunito-Regular.ttf) format("truetype");
+}

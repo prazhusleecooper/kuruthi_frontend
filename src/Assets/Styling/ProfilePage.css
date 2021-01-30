@@ -1,19 +1,31 @@
+@import "./Variables.css";
+
 .page-container {
 	padding: 2em 2em;
+	height: 85vh;
+	overflow-y: scroll;
 }
 
-.info-header {
-	width: 100%;
+.info-header-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+}
+
+.info-header {
+	/* width: 100%; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 	position: relative;
 }
 
+/* CIRCULAR AREA */
 .blood-group-section {
-	width: 7em;
-	height: 7em;
+	width: 8em;
+	height: 8em;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -21,26 +33,104 @@
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	background-color: red;
-	color: orange;
-	position: absolute;
+	background-color: var(--primary-red);
+	color: var(--primary-orange);
+	z-index: 1;
 }
 
+/* Blood type */
 .blood-group-text {
-	font-size: 3.5em;
+	font-size: 3em;
+	font-weight: bold;
 }
 
+/* Blood Polarity */
 .blood-group-suffix {
-	font-size: 1.25em;
+	font-size: 1.55em;
+	font-weight: bold;
 }
 
 .info-header-name-section {
-	padding: 1.2em 2em;
+	width: 70%;
+	margin-top: -6.3em;
+	padding: 1.2em 1em 1.2em 8.5em;
 	border-radius: 50px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73);
+	/* box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73);
 	-webkit-box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73);
-	-moz-box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73);
-	position: absolute;
+	-moz-box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73); */
+	-webkit-box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.75);
+}
+
+.info-header-field-text {
+	color: var(--primary-red);
+	font-weight: bold;
+}
+
+.info-header-user-data {
+	max-width: 700px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* PROFILE DETAILS SECTION */
+.profile-details-container {
+	margin: 2em 0;
+	border-radius: 1em;
+	padding: 1em 2.5em;
+	/* box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73);
+	-webkit-box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73);
+	-moz-box-shadow: -1px 2px 44px 0px rgba(0, 0, 0, 0.73); */
+	-webkit-box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.75);
+}
+
+.profile-details-header-section {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.profile-details-header-section > .edit-btn-section {
+	background-color: var(--primary-red);
+	font-size: 0.85em;
+	padding: 0.75em;
+	border-radius: 2em;
+	cursor: pointer;
+}
+
+.profile-details-container > .profile-details-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.profile-details-table > tbody > tr > td {
+	border-top: 2px solid var(--primary-red);
+	/* min-height: 2em; */
+	padding: 0.75em 0;
+}
+
+.profile-details-table > tbody > tr:first-child > td {
+	border: none;
+}
+
+.profile-details-table > tbody > tr > .table-field-name {
+	width: 50%;
+	font-weight: bold;
+}
+
+.profile-details-table > tbody > tr > .table-field-data {
+	width: 50%;
+	word-break: break-all;
+	/* white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; */
 }
